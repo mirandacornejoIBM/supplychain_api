@@ -1,9 +1,13 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import pandas as pd
+import os
 
 app = FastAPI(title="Supply Chain & Sales", version="1.0.0")
-df = pd.read_csv("data.csv")
+base = os.path.dirname(os.path.abspath(_file_))
+data = os.path.join(base, "data.csv")
+
+df = pd.read_csv(data)
 class Product(BaseModel):
       product_card_id: int
       product_name:str
