@@ -1,0 +1,23 @@
+openapi: 3.0.3
+info:
+  title: Supply Chain CSV API
+  description: API that provides direct access to the supply chain CSV file hosted on GitHub.
+  version: 1.0.0
+servers:
+  - url: https://raw.githubusercontent.com/mirandacornejoIBM/supplychain_api/main
+paths:
+  /data.csv:
+    get:
+      summary: Get supply chain CSV
+      description: Fetches the raw supply chain data in CSV format.
+      responses:
+        '200':
+          description: CSV file retrieved successfully
+          content:
+            text/csv:
+              schema:
+                type: string
+                example: |
+                  id,product,quantity,location
+                  1,Widget A,100,New York
+                  2,Widget B,200,San Francisco
