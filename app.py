@@ -3,7 +3,7 @@ from pydantic import BaseModel
 import pandas as pd
 
 app = FastAPI(title="Supply Chain & Sales", version="1.0.0")
-df = pd.read_csv("/Users/mirandacornejoahuja/Desktop/data.csv")
+df = pd.read_csv("data.csv")
 class Product(BaseModel):
       product_card_id: int
       product_name:str
