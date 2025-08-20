@@ -23,7 +23,7 @@ class Customer(BaseModel):
       customer_state:str | None=None
       customer_zipcode: str | None=None
     
- class Order(BaseModel):
+class Order(BaseModel):
      order_id: str
      order_customer_id: float
      order_date: str
