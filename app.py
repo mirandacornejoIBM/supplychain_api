@@ -5,7 +5,7 @@ Enter "help" below or click "Help" above for more information.
 >>> import pandas as pd
 >>> 
 >>> app = FastAPI(title="Supply Chain & Sales", version="1.0.0")
->>> df = pd.read_csv("/Users/mirandacornejoahuja/Desktop/supplychaincoe.csv")
+>>> df = pd.read_csv("/Users/mirandacornejoahuja/Desktop/data.csv")
 >>> class Product(BaseModel):
 ...      product_card_id: int
 ...      product_name:str
