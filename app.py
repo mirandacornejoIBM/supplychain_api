@@ -5,7 +5,7 @@ import os
 
 app = FastAPI(title="Supply Chain & Sales", version="1.0.0")
 base = os.path.dirname(os.path.abspath(__file__))
-data = os.path.join(base, "data.csv")
+data = os.path.join(base, "supplychaincoe.csv")
 
 df = pd.read_csv(data)
 class Product(BaseModel):
